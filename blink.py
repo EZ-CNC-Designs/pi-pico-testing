@@ -1,16 +1,13 @@
 from machine import Pin
 import time
-# Note that the file name needs to be "main.py" or it won't run
+# Note that the file name needs to be "main.py" or it won't run (when saved on the Pico)
 
-led = Pin("LED", Pin.OUT) # Sets Pin 16 as an output
-light = Pin(16, Pin.OUT)
+led = Pin("LED", Pin.OUT) # Sets LED as an output
 
 
 while True:
     led.value(1) # Turn LED "on"
-    light.value(1)
     time.sleep(3) # Pause
     
     led.value(0) # Turn LED "off"
-    light.value(0)
     time.sleep(3) # Pause
